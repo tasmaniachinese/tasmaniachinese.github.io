@@ -1,14 +1,14 @@
 import * as React from 'react';
+import {useEffect} from 'react';
 import './App.css';
-import {Routes, Route, useLocation} from 'react-router-dom';
-import {Box, CssBaseline, Typography} from "@mui/material";
-import { Home } from './pages/Home';
+import {Route, Routes, useLocation} from 'react-router-dom';
+import {CssBaseline} from "@mui/material";
+import {Home} from './pages/Home';
 import Rally from "./pages/Rally";
 import Navbar from "./components/NavBar";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import About from "./pages/About";
-import {useEffect} from "react";
 import Contact from "./components/Contact";
 
 const App = ()=> {

@@ -5,15 +5,10 @@ import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import aboutImage1 from '../assets/common/about_us1.png';
 import aboutImage2 from '../assets/common/about_us2.jpg';
 
-// Placeholder images - replace with real ones later
-const image1_community = 'https://images.unsplash.com/photo-1582213782179-e0d7145014ad?auto=format&fit=crop&w=800&q=80'; // Diverse hands/community
-const image2_vision = 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80';    // Nature/Growth/Tasmania vibe
-
 const About = () => {
     return (
         <Container maxWidth="lg" sx={{ py: 8 }}>
 
-            {/* ================= MAIN TITLE ================= */}
             <Box sx={{ mb: 6, textAlign: 'center' }}>
                 <Typography variant="h3" component="h1" fontWeight="bold" gutterBottom>
                     About TCSA
@@ -24,24 +19,21 @@ const About = () => {
             </Box>
 
 
-            {/* ================= SECTION 1: WHO WE ARE (Text Left, Image Right) ================= */}
             <Grid container spacing={6} alignItems="center" sx={{ mb: 8 }}>
-                {/* TEXT BLOCK */}
                 <Grid size={{ xs: 12, md: 7 }}>
                     <Typography variant="h5" fontWeight="bold" gutterBottom color="primary">
                         Our Mission & Origin
                     </Typography>
-                    <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    <Typography variant="body1" component={"p"} sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
                         Tasmania Chinese Support Association (TCSA) is a community-led not-for-profit organisation established in 2025.
                         Our mission is to strengthen wellbeing, safety, and social connection for culturally and linguistically diverse (CALD) communities across Tasmania.
                     </Typography>
-                    <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    <Typography variant="body1" component={"p"} sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
                         We work directly with families, young people, and community partners to reduce barriers to participation and access to support.
                         We particularly focus on helping non-native English speakers who may experience isolation, communication challenges, or difficulty navigating local services.
                     </Typography>
                 </Grid>
 
-                {/* IMAGE BLOCK */}
                 <Grid size={{ xs: 12, md: 5 }}>
                     <Box
                         component="img"
@@ -51,7 +43,7 @@ const About = () => {
                             width: '100%',
                             height: { xs: '300px', md: '400px' }, // Fixed height for neatness
                             objectFit: 'cover',
-                            borderRadius: 4, // Soft rounded corners
+                            borderRadius: 4,
                             boxShadow: 3,
                         }}
                     />
@@ -60,14 +52,12 @@ const About = () => {
 
             <Divider sx={{ my: 8 }} />
 
-            {/* ================= SECTION 2: OUR PROGRAMS (Two Feature Cards) ================= */}
             <Box sx={{ mb: 8 }}>
                 <Typography variant="h4" fontWeight="bold" textAlign="center" sx={{ mb: 6 }}>
                     Our Core Programs
                 </Typography>
 
                 <Grid container spacing={4}>
-                    {/* PROGRAM 1 CARD */}
                     <Grid size={{ xs: 12, md: 6 }}>
                         <ProgramCard
                             title="Safe • Confident • Connected"
@@ -80,7 +70,6 @@ const About = () => {
                         </ProgramCard>
                     </Grid>
 
-                    {/* PROGRAM 2 CARD */}
                     <Grid size={{ xs: 12, md: 6 }}>
                         <ProgramCard
                             title="EmpowerHER Tasmania"
@@ -98,9 +87,7 @@ const About = () => {
             <Divider sx={{ my: 8 }} />
 
 
-            {/* ================= SECTION 3: VISION & VALUES (Image Left, Text Right) ================= */}
             <Grid container spacing={6} alignItems="center">
-                {/* IMAGE BLOCK (Order changes on mobile to sit above text) */}
                 <Grid size={{ xs: 12, md: 5 }} sx={{ order: { xs: 1, md: 1 } }}>
                     <Box
                         component="img"
@@ -116,17 +103,15 @@ const About = () => {
                     />
                 </Grid>
 
-                {/* TEXT BLOCK */}
                 <Grid size={{ xs: 12, md: 7 }} sx={{ order: { xs: 2, md: 2 } }}>
                     <Typography variant="h5" fontWeight="bold" gutterBottom color="primary">
                         Our Commitment & Vision
                     </Typography>
-                    <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
+                    <Typography variant="body1" component={"p"} sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
                         TCSA is committed to inclusive practice, strong governance, and evidence-based delivery.
                         We collaborate closely with community organisations, educators, service providers, and volunteers to ensure our programs are accessible, responsive, and outcomes-focused.
                     </Typography>
 
-                    {/* Highlighting the final vision statement */}
                     <Paper elevation={0} sx={{ bgcolor: 'primary.light', p: 3, borderRadius: 2, mt: 3, color: 'white' }}>
                         <Typography variant="h6" component="p" fontWeight="bold" sx={{ fontStyle: 'italic' }}>
                             "Our vision is a Tasmania where every person—regardless of language background—can feel safe, supported, and connected, and where girls and young women can pursue STEM pathways with confidence and opportunity."
@@ -139,19 +124,24 @@ const About = () => {
     );
 };
 
-// ================= HELPER COMPONENT FOR PROGRAM CARDS =================
-// This keeps the main code clean. It creates a nice box with a colored border on the left.
-const ProgramCard = ({ title, icon, children, accentColor }: any) => (
+interface ProgramCardProps {
+    title: string;
+    icon: React.ReactNode;
+    children: React.ReactNode;
+    accentColor: string;
+}
+
+const ProgramCard = ({ title, icon, children, accentColor }: ProgramCardProps) => (
     <Paper
         elevation={2}
         sx={{
             p: 4,
             height: '100%',
             borderRadius: 3,
-            borderLeft: `6px solid ${accentColor}`, // The colored accent line
+            borderLeft: `6px solid ${accentColor}`,
             transition: 'transform 0.2s',
             '&:hover': {
-                transform: 'translateY(-5px)', // A subtle lift effect on hover
+                transform: 'translateY(-5px)',
                 boxShadow: 4
             }
         }}

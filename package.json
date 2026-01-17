@@ -11,23 +11,33 @@
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-router-dom": "7.12.0"
-
   },
   "devDependencies": {
+    "@eslint/js": "9.39.2",
     "@types/node": "25.0.9",
     "@types/react": "19.2.0",
     "@types/react-dom": "19.2.0",
+    "@vitejs/plugin-react": "5.1.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-react-refresh": "0.4.26",
     "gh-pages": "6.3.0",
+    "prettier": "^3.8.0",
     "typescript": "5.9.3",
-    "vite": "7.3.1",
-    "@vitejs/plugin-react": "5.1.2"
+    "typescript-eslint": "^8.53.0",
+    "vite": "7.3.1"
   },
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "format": "prettier --write .",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [

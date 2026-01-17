@@ -1,7 +1,7 @@
 import React from 'react';
-import {Box, Button, Card, CardContent, CardHeader, Container, Grid, Typography} from '@mui/material';
+import {Box, Button, Card, CardContent, Container, Grid, Typography} from '@mui/material';
 import rallyImage from '../assets/youthviolencerally/rally0.jpg';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const WhatIsOn = () => {
     return (
