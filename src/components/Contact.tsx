@@ -15,7 +15,7 @@ const Contact = () => {
                     <Typography variant="h4" fontWeight="bold" gutterBottom>
                         Get in Touch
                     </Typography>
-                    <Typography variant="body1" color="text.secondary" paragraph sx={{ mb: 4 }}>
+                    <Typography variant="body1" color="text.secondary" component={"p"} sx={{ mb: 4 }}>
                         Have a question about our programs or want to get involved?
                         We would love to hear from you. Fill out the form or reach us via the details below.
                     </Typography>
@@ -28,7 +28,7 @@ const Contact = () => {
                             </Paper>
                             <Box>
                                 <Typography variant="subtitle2" fontWeight="bold">Email Us</Typography>
-                                <Typography variant="body2" color="text.secondary">info@tcsa.org.au</Typography>
+                                <Typography variant="body2" color="text.secondary">office@chinesetasmania.com</Typography>
                             </Box>
                         </Box>
 
