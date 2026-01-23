@@ -43,7 +43,7 @@ const Banner = () => {
                         lineHeight: { xs: 1.2, md: 1.1 }
                     }}
                 >
-                    Tasmanian Chinese Community Association
+                    Tasmania Chinese Support Association
                 </Typography>
 
                 <Typography
