@@ -22,7 +22,7 @@ const MidAutumn = () => {
 
 
     return (
-        <Container maxWidth="lg" sx={{py: 8}}>
+        <Container maxWidth="lg" sx={{py: 8}} id={"event_details"}>
             <Button component={Link} to="/" sx={{mb: 4}}>
                 &larr; Back to Home
             </Button>
