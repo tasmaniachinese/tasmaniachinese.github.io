@@ -10,6 +10,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Contact from "./components/Contact";
+import MidAutumn from "./pages/MidAutumn";
 
 const App = ()=> {
 
@@ -29,6 +30,7 @@ const App = ()=> {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/rally" element={<Rally />} />
+              <Route path="/midautumn" element={<MidAutumn />} />
           </Routes>
           <Footer />
       </>

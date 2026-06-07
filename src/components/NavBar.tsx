@@ -31,9 +31,8 @@ const pages = [
 ];
 
 const eventItems = [
-    { name: 'Event 1', path: '/rally' },
-    { name: 'Event 2', path: '/rally' },
-    { name: 'Event 3', path: '/rally' },
+    { name: 'Mooncake Festival Celebration 2026', path: '/midautumn' },
+    { name: 'Youth Violence Rally', path: '/rally' },
 ];
 
 const Navbar = () => {
