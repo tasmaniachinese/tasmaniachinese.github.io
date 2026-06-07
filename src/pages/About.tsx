@@ -13,24 +13,38 @@ const About = () => {
                 <Typography variant="h3" component="h1" fontWeight="bold" gutterBottom>
                     About TCSA
                 </Typography>
-                <Typography variant="h6" color="text.secondary" sx={{ maxWidth: '800px', mx: 'auto' }}>
-                    Strengthening wellbeing, safety, and social connection for Tasmania's diverse communities.
-                </Typography>
             </Box>
-
-
             <Grid container spacing={6} alignItems="center" sx={{ mb: 8 }}>
                 <Grid size={{ xs: 12, md: 7 }}>
-                    <Typography variant="h5" fontWeight="bold" gutterBottom color="primary">
-                        Our Mission & Origin
+                    <Typography
+                        variant="body1"
+                        sx={{ fontSize: '1.1rem', lineHeight: 1.7, mb: 2 }}
+                    >
+                        The Tasmania Chinese Social Association (TCSA) is a community-based multicultural organisation
+                        committed to supporting Chinese-Australians, international students, migrants, and broader
+                        multicultural communities across Tasmania.
                     </Typography>
-                    <Typography variant="body1" component={"p"} sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
-                        Tasmania Chinese Support Association (TCSA) is a community-led not-for-profit organisation established in 2025.
-                        Our mission is to strengthen wellbeing, safety, and social connection for culturally and linguistically diverse (CALD) communities across Tasmania.
+                    <Typography
+                        variant="h6"
+                        sx={{ mt: 2, mb: 1 }}
+                    >
+                        TCSA aims to
                     </Typography>
-                    <Typography variant="body1" component={"p"} sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}>
-                        We work directly with families, young people, and community partners to reduce barriers to participation and access to support.
-                        We particularly focus on helping non-native English speakers who may experience isolation, communication challenges, or difficulty navigating local services.
+
+                    <Box component="ul" sx={{ pl: 3, m: 0, mb: 2 }}>
+                        <li>Promote social inclusion and multicultural participation</li>
+                        <li>Support settlement and community connection for new migrants</li>
+                        <li>Encourage civic engagement and leadership development</li>
+                        <li>Strengthen cross-cultural understanding within Tasmania</li>
+                        <li>Build stronger connections between multicultural communities and wider society</li>
+                    </Box>
+                    <Typography
+                        variant="body1"
+                        sx={{ fontSize: '1.1rem', lineHeight: 1.7 }}
+                    >
+                        TCSA focuses particularly on creating practical pathways for young people,
+                        international students, and newly arrived migrants to become active contributors
+                        and future leaders within the Tasmanian community.
                     </Typography>
                 </Grid>
 
@@ -54,7 +68,7 @@ const About = () => {
 
             <Box sx={{ mb: 8 }}>
                 <Typography variant="h4" fontWeight="bold" textAlign="center" sx={{ mb: 6 }}>
-                    Our Core Programs
+                    Current Focus Areas
                 </Typography>
 
                 <Grid container spacing={4}>
