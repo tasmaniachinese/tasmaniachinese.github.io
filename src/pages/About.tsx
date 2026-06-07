@@ -74,6 +74,134 @@ const About = () => {
                 <Grid container spacing={4}>
                     <Grid size={{ xs: 12, md: 6 }}>
                         <ProgramCard
+                            title="Supporting New Migrants and International Students"
+                            icon={<DiversityEmblem color="primary" fontSize="large" />}
+                            accentColor="#1976d2" // Primary Blue
+                        >
+                            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+                                TCSA recognises that many new migrants and international students face challenges including:
+                            </Typography>
+                            <Stack spacing={0.5} sx={{ mt: 2, mb: 3 }}>
+                                <Typography variant="body2" color="text.secondary">
+                                    • social isolation
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • language and communication barriers
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • lack of local networks
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • difficulty understanding Australian systems and services
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • employment and career uncertainty
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • limited opportunities for community participation
+                                </Typography>
+                            </Stack>
+
+                            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+                                TCSA is working to provide:
+                            </Typography>
+                            <Stack spacing={0.5} sx={{ mt: 2, mb: 3 }}>
+                                <Typography variant="body2" color="text.secondary">
+                                    • community orientation and settlement support
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • social networking opportunities
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • mentoring and peer support
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • referral pathways to local services
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • volunteering opportunities
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • activities that help migrants develop confidence, belonging, and local connections
+                                </Typography>
+                            </Stack>
+                            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+                                The organisation aims to help new arrivals not only “settle”, but also develop a sense of ownership, participation, and long-term belonging within Tasmania.
+                            </Typography>
+                        </ProgramCard>
+                    </Grid>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <ProgramCard
+                            title="Youth Leadership and Civic Participation"
+                            icon={<DiversityEmblem color="primary" fontSize="large" />}
+                            accentColor="#9c27b0" // Primary Blue
+                        >
+                            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+                                One of TCSA’s major priorities is developing young multicultural leaders in Tasmania.
+                                TCSA believes multicultural communities should not only participate in events, but also:
+                            </Typography>
+                            <Stack spacing={0.5} sx={{ mt: 2, mb: 3 }}>
+                                <Typography variant="body2" color="text.secondary">
+                                    • contribute to public life
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • engage with local institutions
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • participate in decision-making
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • difficulty understanding Australian systems and services
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • volunteer within the community
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • become future community and professional leaders
+                                </Typography>
+                            </Stack>
+
+                            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+                                Future initiatives may include:
+                            </Typography>
+                            <Stack spacing={0.5} sx={{ mt: 2, mb: 3 }}>
+                                <Typography variant="body2" color="text.secondary">
+                                    • youth leadership programs
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • civic participation workshops
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • mentoring by established professionals
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • community volunteering projects
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • networking with government and community organisations
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    • leadership pathways for multicultural youth and international students
+                                </Typography>
+                            </Stack>
+                            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+                                The goal is to empower young people to see Tasmania as a place where they can contribute, lead, and build their future.
+                            </Typography>
+                        </ProgramCard>
+                    </Grid>
+                </Grid>
+            </Box>
+
+            <Divider sx={{ my: 8 }} />
+
+            <Box sx={{ mb: 8 }}>
+                <Typography variant="h4" fontWeight="bold" textAlign="center" sx={{ mb: 6 }}>
+                    Key Community Projects
+                </Typography>
+
+                <Grid container spacing={4}>
+                    <Grid size={{ xs: 12, md: 6 }}>
+                        <ProgramCard
                             title="Safe • Confident • Connected"
                             icon={<DiversityEmblem color="primary" fontSize="large" />}
                             accentColor="#1976d2" // Primary Blue
@@ -99,7 +227,6 @@ const About = () => {
             </Box>
 
             <Divider sx={{ my: 8 }} />
-
 
             <Grid container spacing={6} alignItems="center">
                 <Grid size={{ xs: 12, md: 5 }} sx={{ order: { xs: 1, md: 1 } }}>
