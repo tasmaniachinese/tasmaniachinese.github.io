@@ -28,7 +28,7 @@ const Contact = () => {
                             </Paper>
                             <Box>
                                 <Typography variant="subtitle2" fontWeight="bold">Email Us</Typography>
-                                <Typography variant="body2" color="text.secondary">office@tasmaniachinese.com</Typography>
+                                <Typography variant="body2" color="text.secondary">office@tcsa.org.au</Typography>
                             </Box>
                         </Box>
 
