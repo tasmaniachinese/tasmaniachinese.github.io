@@ -42,7 +42,7 @@ const MidAutumn = () => {
                             sx={{fontSize: '1.1rem', lineHeight: 1.8, mb: 3}}
                         >
                             TCSA is currently preparing for its upcoming Mooncake Festival
-                            Celebration on 20 September 2026, supported through Tasmanian Government funding.
+                            Celebration on 13 September 2026, supported through Tasmanian Government funding.
                         </Typography>
 
                         <Grid container spacing={2}>

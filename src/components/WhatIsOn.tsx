@@ -37,7 +37,7 @@ const WhatIsOn = () => {
                                 Mooncake Festival Celebration 2026
                             </Typography>
                             <Typography variant="body1" color="text.secondary" component={"p"}>
-                                TCSA is currently preparing for its upcoming Mooncake Festival Celebration on 20
+                                TCSA is currently preparing for its upcoming Mooncake Festival Celebration on 13
                                 September 2026, supported through Tasmanian Government funding. The event aims to celebrate:
                             </Typography>
 
