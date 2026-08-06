@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Button, Card, CardContent, Container, Grid, Stack, Typography} from '@mui/material';
-import mooncakeImg from '../assets/midautumn/moocake.jpg';
+import midAutumnImg from '../assets/midautumn/mid_autumn.jpeg';
 import {useNavigate} from 'react-router-dom';
 
 const WhatIsOn = () => {
@@ -34,25 +34,43 @@ const WhatIsOn = () => {
                                 Featured Event
                             </Typography>
                             <Typography variant="h5" fontWeight="bold" sx={{mb: 2}}>
-                                Mooncake Festival Celebration 2026
+                                🌕 Celebrate the Mid-Autumn Festival with TCSA! 🌕
                             </Typography>
                             <Typography variant="body1" color="text.secondary" component={"p"}>
-                                TCSA is currently preparing for its upcoming Mooncake Festival Celebration on 13
-                                September 2026, supported through Tasmanian Government funding. The event aims to celebrate:
+                                Mark your calendars! The Tasmania Chinese Support Association (塔州华人互助会) invites you to an afternoon of vibrant culture, family fun, and community connection. ✨
                             </Typography>
-
                             <Stack spacing={0.5} sx={{ mt: 2, mb: 3 }}>
                                 <Typography variant="body2" color="text.secondary">
-                                    • Family reunion and community connection
+                                    📅 **Sunday, 13 September 2026**
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    • Multicultural inclusion and cultural exchange
+                                    🕛 **12:00 PM – 3:00 PM**
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    • Intergenerational engagement
+                                    📍 **Kingborough Community Hub**
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    • Understanding Chinese cultural traditions in Tasmania
+                                    ✨ **共赏明月 • 同庆中秋** ✨
+                                </Typography>
+                            </Stack>
+                            <Typography variant="body1" color="text.secondary" component={"p"}>
+                                Everyone is welcome! Admission is completely free. 👉 Scan the QR code on our flyer to register now!
+                            </Typography>
+                            <Stack spacing={0.5} sx={{ mt: 2, mb: 3 }}>
+                                <Typography variant="body2" color="text.secondary">
+                                    * 🥮 Mooncake Tasting
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    * 🏮 Festive Lantern Activities
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    * 🎲 Cardboard & Board Games
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    * 🎭 Cultural Stage Performances
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    * 👨‍👩‍👧‍👦 Family-Friendly Fun
                                 </Typography>
                             </Stack>
                             <Box sx={{mt: 2}}>
@@ -68,7 +86,7 @@ const WhatIsOn = () => {
 
                         <Grid size={{xs: 12, lg: 6}}>
                             <img
-                                src={mooncakeImg}
+                                src={midAutumnImg}
                                 alt="Event"
                                 style={{
                                     width: '100%',

@@ -5,7 +5,7 @@ import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import GroupsIcon from '@mui/icons-material/Groups';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import {Link} from 'react-router-dom';
-import mooncakeImg from '../assets/midautumn/moocake.jpg';
+import midAutumnImg from '../assets/midautumn/mid_autumn.jpeg';
 
 const MidAutumn = () => {
     // Load the Tally embed script so dynamicHeight=1 works properly
@@ -95,7 +95,7 @@ const MidAutumn = () => {
                         <Grid size={{xs: 12, md: 6}} sx={{display: 'flex'}}>
                             <Box
                                 component="img"
-                                src={mooncakeImg}
+                                src={midAutumnImg}
                                 alt="Mooncake Festival celebration"
                                 sx={{
                                     width: '100%',
@@ -120,7 +120,7 @@ const MidAutumn = () => {
                                     height: '100%',
                                     display: 'flex',
                                     flexDirection: 'column',
-                                    justifyContent: 'center',
+                                    justifyContent: 'start',
                                 }}
                             >
                                 <Typography
