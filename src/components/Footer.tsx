@@ -51,7 +51,7 @@ const Footer = () => {
                         <Stack spacing={2}>
                             <Box sx={{ display: 'flex', alignItems: 'center', opacity: 0.7 }}>
                                 <EmailIcon sx={{ mr: 1, fontSize: 20 }} />
-                                <Typography variant="body2">info@tcsa.org.au</Typography>
+                                <Typography variant="body2">office@tcsa.org.au</Typography>
                             </Box>
                             <Box sx={{ opacity: 0.7 }}>
                                 <Typography variant="body2">Hobart, Tasmania</Typography>
@@ -66,7 +66,7 @@ const Footer = () => {
                             Follow Us
                         </Typography>
                         <MuiLink
-                            href="https://facebook.com"
+                            href="https://www.facebook.com/share/1EM2YF3VQJ/"
                             target="_blank"
                             color="inherit"
                             sx={{ display: 'flex', alignItems: 'center', textDecoration: 'none', opacity: 0.8, '&:hover': { opacity: 1 } }}
