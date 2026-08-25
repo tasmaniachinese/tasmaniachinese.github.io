@@ -5,7 +5,7 @@ import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import GroupsIcon from '@mui/icons-material/Groups';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import {Link} from 'react-router-dom';
-import midAutumnImg from '../assets/midautumn/mid_autumn.jpeg';
+import midAutumnImg from '../assets/midautumn/mid_autumn_md.jpg';
 
 const MidAutumn = () => {
     // Load the Tally embed script so dynamicHeight=1 works properly

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Button, Card, CardContent, Container, Grid, Stack, Typography} from '@mui/material';
-import midAutumnImg from '../assets/midautumn/mid_autumn.jpeg';
+import midAutumnImg from '../assets/midautumn/mid_autumn_lg.jpg';
 import {useNavigate} from 'react-router-dom';
 
 const WhatIsOn = () => {
