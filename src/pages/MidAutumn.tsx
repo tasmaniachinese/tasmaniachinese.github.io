@@ -5,15 +5,11 @@ import {
     Chip,
     Container,
     Grid,
-    ImageList,
-    ImageListItem,
     Paper,
     Stack,
     ToggleButton,
     ToggleButtonGroup,
     Typography,
-    useMediaQuery,
-    useTheme,
 } from '@mui/material';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
@@ -33,10 +29,8 @@ import lanternImg from '../assets/midautumn/lantern.jpg';
 import kitchenImg from '../assets/midautumn/kitchen.jpg';
 import foodImg from '../assets/midautumn/food.jpg';
 import audienceImg from '../assets/midautumn/audience.jpg';
-import chatImg from '../assets/midautumn/chat.jpg';
 import familyImg from '../assets/midautumn/family.jpg';
 import mpImg from '../assets/midautumn/mp.jpg';
-import awardImg from '../assets/midautumn/award.jpg';
 import sponsorImg from '../assets/midautumn/sponsor.jpg';
 
 type Lang = 'en' | 'zh';
@@ -143,10 +137,8 @@ const galleryData = [
     {img: lanternImg, title: 'Lantern-making activity'},
     {img: kitchenImg, title: 'Volunteers preparing food'},
     {img: audienceImg, title: 'Audience enjoying the show'},
-    {img: chatImg, title: 'Community members catching up'},
     {img: familyImg, title: 'Families celebrating together'},
     {img: mpImg, title: 'Peter George MP speaking'},
-    {img: awardImg, title: 'Presentation on stage'},
     {img: sponsorImg, title: 'Sponsor Saigon Express'},
 ];
 
@@ -195,10 +187,6 @@ const MidAutumn = () => {
     const [lang, setLang] = useState<Lang>('en');
     const t = content[lang];
 
-    const theme = useTheme();
-    const isSm = useMediaQuery(theme.breakpoints.up('sm'));
-    const isMd = useMediaQuery(theme.breakpoints.up('md'));
-    const galleryCols = isMd ? 3 : isSm ? 2 : 1;
 
     return (
         <Container maxWidth="lg" sx={{py: 8}} id={"event_details"}>
@@ -310,18 +298,26 @@ const MidAutumn = () => {
                 <Typography variant="h4" fontWeight="bold" align="center" sx={{mb: 4}}>
                     {t.galleryTitle}
                 </Typography>
-                <ImageList variant="masonry" cols={galleryCols} gap={16}>
+                {/* Uniform 3:2 tiles keep every row aligned, whatever the photo orientation */}
+                <Grid container spacing={2}>
                     {galleryData.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
+                        <Grid key={item.img} size={{xs: 12, sm: 6, md: 4}}>
+                            <Box
+                                component="img"
                                 src={item.img}
                                 alt={item.title}
                                 loading="lazy"
-                                style={{borderRadius: '12px'}}
+                                sx={{
+                                    width: '100%',
+                                    aspectRatio: '3 / 2',
+                                    objectFit: 'cover',
+                                    display: 'block',
+                                    borderRadius: '12px',
+                                }}
                             />
-                        </ImageListItem>
+                        </Grid>
                     ))}
-                </ImageList>
+                </Grid>
             </Box>
 
             <Paper elevation={0} sx={{
