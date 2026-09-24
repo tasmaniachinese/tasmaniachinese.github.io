@@ -30,18 +30,108 @@ import kitchenImg from '../assets/midautumn/kitchen.jpg';
 import foodImg from '../assets/midautumn/food.jpg';
 import audienceImg from '../assets/midautumn/audience.jpg';
 import familyImg from '../assets/midautumn/family.jpg';
-import mpImg from '../assets/midautumn/mp.jpg';
+import chatImg from '../assets/midautumn/chat.jpg';
+import luckyDraw1Img from '../assets/midautumn/lucky_draw1.jpg';
+import luckyDraw2Img from '../assets/midautumn/lucky_draw2.jpg';
+import luckyDraw3Img from '../assets/midautumn/lucky_draw3.jpg';
+import speakerMingqingImg from '../assets/midautumn/speaker_mingqing.jpg';
+import speakerAdrianImg from '../assets/midautumn/speaker_adrian.jpg';
+import speakerAndrewImg from '../assets/midautumn/speaker_andrew.jpg';
+import speakerStudentImg from '../assets/midautumn/speaker_student.jpg';
+import speakerTienImg from '../assets/midautumn/speaker_tien.jpg';
+import speakerPeterImg from '../assets/midautumn/speaker_peter.jpg';
+import speakerJadeImg from '../assets/midautumn/speaker_jade.jpg';
+import speakerHingorImg from '../assets/midautumn/speaker_hingor.jpg';
+import speakerJasonImg from '../assets/midautumn/speaker_jason.jpg';
+import sponsorsImg from '../assets/midautumn/sponsors.jpg';
 import sponsorImg from '../assets/midautumn/sponsor.jpg';
 
 type Lang = 'en' | 'zh';
 
 const sponsors = [
     'China Lanzhou Beef Noodle',
-    'Saigonexpress',
+    'Saigon Express',
     'Nocton Vineyard',
     'UGG',
-    'Beebom TRAVEL & RETREATS',
+    'Beebom Travel & Retreats',
 ];
+
+const speakers = [
+    {
+        img: speakerMingqingImg,
+        name: 'Mingqing Yang 杨茗清',
+        role: {
+            en: 'President of Tasmania Chinese Support Association',
+            zh: '塔州华人互助会主席',
+        },
+    },
+    {
+        img: speakerPeterImg,
+        name: 'Peter George MP',
+        role: {
+            en: 'Independent Member for Franklin, Tasmania House of Assembly',
+            zh: '塔州议会 Franklin 选区独立议员',
+        },
+    },
+    {
+        img: speakerAdrianImg,
+        name: 'Adrian Leary',
+        role: {
+            en: 'Senior Sergeant, Tasmania Police',
+            zh: '塔州警察局高级警督',
+        },
+    },
+    {
+        img: speakerAndrewImg,
+        name: 'Andrew Blackett',
+        role: {
+            en: 'Department for Education, Children and Young People',
+            zh: '塔州教育部',
+        },
+    },
+    {
+        img: speakerJadeImg,
+        name: 'Jade Li 李琦',
+        role: {
+            en: 'President, Multicultural Council of Tasmania',
+            zh: '塔州多元文化委员会主席',
+        },
+    },
+    {
+        img: speakerHingorImg,
+        name: 'Hingor',
+        role: {
+            en: 'President, Chinese Community Association of Tasmania',
+            zh: '塔省华联会主席',
+        },
+    },
+    {
+        img: speakerJasonImg,
+        name: 'Jason Zhang 张遂新',
+        role: {
+            en: 'Founder & President of Wild Bull Club',
+            zh: '狂牛俱乐部创始人 & 主席',
+        },
+    },
+    {
+        img: speakerTienImg,
+        name: 'Tien Ho',
+        role: {
+            en: 'Owner of Saigon Express',
+            zh: 'Saigon Express 店主',
+        },
+    },
+    {
+        img: speakerStudentImg,
+        name: 'International Student Representative',
+        role: {
+            en: 'Address by International Student Representative',
+            zh: '国际学生代表致辞',
+        },
+    },
+];
+
+const luckyDrawData = [luckyDraw1Img, luckyDraw2Img, luckyDraw3Img];
 
 const content = {
     en: {
@@ -82,6 +172,8 @@ const content = {
             'The celebration may have come to an end, but TCSA’s journey is only beginning.',
         ],
         closing: 'Together, hand in hand, one step at a time.',
+        speakersTitle: 'Words from our guests',
+        luckyDrawTitle: 'Lucky Draw',
         galleryTitle: 'Event Highlights',
         sponsorsTitle: 'Big thanks to our sponsors',
     },
@@ -122,6 +214,8 @@ const content = {
             '中秋嘉年华落下帷幕，但 TCSA 的社区之路才刚刚开始。',
         ],
         closing: '一起手拉手，慢慢走下去。',
+        speakersTitle: '嘉宾致辞',
+        luckyDrawTitle: '幸运抽奖',
         galleryTitle: '活动精彩瞬间',
         sponsorsTitle: '特别感谢我们的赞助商',
     },
@@ -138,7 +232,7 @@ const galleryData = [
     {img: kitchenImg, title: 'Volunteers preparing food'},
     {img: audienceImg, title: 'Audience enjoying the show'},
     {img: familyImg, title: 'Families celebrating together'},
-    {img: mpImg, title: 'Peter George MP speaking'},
+    {img: chatImg, title: 'Community members catching up'},
     {img: sponsorImg, title: 'Sponsor Saigon Express'},
 ];
 
@@ -274,6 +368,29 @@ const MidAutumn = () => {
                 <Typography sx={{mt: 2, opacity: 0.85}}>{t.memberName}</Typography>
             </Paper>
 
+            <Box sx={{mb: 8}}>
+                <Typography variant="h4" fontWeight="bold" align="center" sx={{mb: 4}}>
+                    {t.speakersTitle}
+                </Typography>
+                <Grid container spacing={3}>
+                    {speakers.map((speaker) => (
+                        <Grid key={speaker.name} size={{xs: 12, sm: 6, md: 4}}>
+                            <Box
+                                component="img"
+                                src={speaker.img}
+                                alt={`${speaker.name} speaking on stage`}
+                                loading="lazy"
+                                sx={{...imgSx, aspectRatio: '3 / 2', height: 'auto'}}
+                            />
+                            <Typography variant="h6" fontWeight="bold" sx={{mt: 2}}>
+                                {speaker.name}
+                            </Typography>
+                            <Typography color="text.secondary">{speaker.role[lang]}</Typography>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
+
             <Grid container spacing={6} alignItems="center" sx={{mb: 8}}>
                 <Grid size={{xs: 12, md: 5}} order={{xs: 2, md: 1}}>
                     <Box component="img" src={volunteersImg} alt="TCSA volunteers" sx={imgSx}/>
@@ -293,6 +410,25 @@ const MidAutumn = () => {
             <Typography variant="h5" fontWeight="bold" color="primary" align="center" sx={{mb: 8}}>
                 {t.closing}
             </Typography>
+
+            <Box sx={{mb: 8}}>
+                <Typography variant="h4" fontWeight="bold" align="center" sx={{mb: 4}}>
+                    {t.luckyDrawTitle}
+                </Typography>
+                <Grid container spacing={2}>
+                    {luckyDrawData.map((img) => (
+                        <Grid key={img} size={{xs: 12, md: 4}}>
+                            <Box
+                                component="img"
+                                src={img}
+                                alt="Lucky draw winners on stage"
+                                loading="lazy"
+                                sx={{...imgSx, aspectRatio: '3 / 2', height: 'auto'}}
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
 
             <Box sx={{mb: 8}}>
                 <Typography variant="h4" fontWeight="bold" align="center" sx={{mb: 4}}>
@@ -320,21 +456,13 @@ const MidAutumn = () => {
                 </Grid>
             </Box>
 
-            <Paper elevation={0} sx={{
-                p: {xs: 3, md: 4},
-                borderRadius: 3,
-                border: '1px solid',
-                borderColor: 'divider',
-                textAlign: 'center',
-            }}>
-                <Typography variant="h5" fontWeight="bold" sx={{mb: 3}}>{t.sponsorsTitle}</Typography>
-                <Stack direction="row" flexWrap="wrap" justifyContent="center" useFlexGap spacing={1.5}>
-                    {sponsors.map((name) => (
-                        <Chip key={name} label={name} color="primary" variant="outlined"
-                              sx={{fontSize: '1rem', py: 2.5, px: 1}}/>
-                    ))}
-                </Stack>
-            </Paper>
+            <Box
+                component="img"
+                src={sponsorsImg}
+                alt={`${t.sponsorsTitle}: ${sponsors.join(', ')}`}
+                loading="lazy"
+                sx={{...imgSx, maxWidth: 640, mx: 'auto'}}
+            />
         </Container>
     );
 };
